@@ -2,6 +2,9 @@ import styled from 'styled-components'
 
 export const Container = styled.header`
   background: var(--background);
+  padding: 1rem 0;
+    text-align: center;
+    border-bottom: 2px solid var(--neutral);
 `
 
 export const Content = styled.div`

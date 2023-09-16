@@ -46,6 +46,13 @@ button {
   cursor: not-allowed;
 }
 
+h1.title {
+  color: #07B0FB;
+    padding: 2rem 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
 h2 {
   font-size: 1.125rem
 }

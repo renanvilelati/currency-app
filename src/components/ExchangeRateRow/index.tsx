@@ -1,10 +1,7 @@
 import { ExchangeRateNowSection } from './styles'
 
-interface ExchangeRateNowProps {
-  currencyCode: string
-}
 
-function ExchangeRateNow({currencyCode}: ExchangeRateNowProps) {
+function ExchangeRateNow() {
   return (
     <ExchangeRateNowSection>
       <div className='headerContent'>
@@ -14,7 +11,8 @@ function ExchangeRateNow({currencyCode}: ExchangeRateNowProps) {
         </div>
 
         <span>
-          {currencyCode}/BRL
+          {/* {currencyCode}/BRL */}
+          /BRL
         </span>
       </div>
 
