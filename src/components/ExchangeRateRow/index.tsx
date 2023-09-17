@@ -8,21 +8,16 @@ import formatValue from '../../utils/formatValue'
 import i18n from '../../utils/i18n'
 
 function ExchangeRateNow() {
-
   const { t } = useTranslation()
 
-  const {currentExchangeRate, currencyCode} = useContext(CurrencyContext)
+  const {currentExchangeRate, currencyCode, isLoading} = useContext(CurrencyContext)
 
-  const currentDate = currentExchangeRate?.lastUpdatedAt.toString()
+  const currentDate = currentExchangeRate?.lastUpdatedAt?.toString()
   const formattedDate = formatDate(currentDate as string)
   const formattedHour = formatHour(currentDate  as string)   
 
-
   const replaceFormat = i18n.language.replace('_', '-')
-  const languageSymbol = replaceFormat.substring(0, 2).toLowerCase() + replaceFormat.substring(2)
-
-  console.log(currentExchangeRate)
-  
+  const languageSymbol = replaceFormat.substring(0, 2).toLowerCase() + replaceFormat.substring(2)  
 
   return (
     <ExchangeRateNowSection>
@@ -38,7 +33,8 @@ function ExchangeRateNow() {
       </div>
 
       <div className='currentValue'>
-        {currentExchangeRate && formatValue(currentExchangeRate.exchangeRate.toString(), languageSymbol)}
+        
+        {!isLoading && currentExchangeRate && formatValue(currentExchangeRate.exchangeRate?.toString(), languageSymbol)}
       </div>
     </ExchangeRateNowSection>
   )

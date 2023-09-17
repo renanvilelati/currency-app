@@ -3,12 +3,16 @@
   "label-exchange-result": "Resultado do câmbio",
   "label-exchange-rate-now": "Taxa de câmbio agora",
   "label-last-30-days": "Últimos 30 dias",
+  "label-charts": "Gráficos",
   "label-open": "Aberto",
   "label-close": "Fechado",
   "label-high": "Alto",
   "label-low": "Baixo",
   "label-close-diff": "Diferença no fechamento",
   "label-loading": "Carregando",
+  "label-no-data-moment": "Sem dados no momento",
+  "label-open-close-chart": "Gráfico de aberto e fechado",
+  "label-high-low-chart": "Gráfico da taxa de câmbio",
 
   "placeholder-currency-code": "Digite a sigla da moeda",
 

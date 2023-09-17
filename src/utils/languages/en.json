@@ -3,12 +3,16 @@
   "label-exchange-result": "Exchange Result",
   "label-exchange-rate-now": "Exchange rate now",
   "label-last-30-days": "Last 30 days",
+  "label-charts": "Charts",
   "label-open": "Open",
   "label-close": "Close",
   "label-high": "High",
   "label-low": "Low",
   "label-close-diff": "Close diff",
   "label-loading": "Loading",
+  "label-no-data-moment": "No data at the moment",
+  "label-open-close-chart": "Open close chart",
+  "label-high-low-chart": "High low chart",
 
   "placeholder-currency-code": "Enter currency code",
 

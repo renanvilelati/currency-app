@@ -1,23 +1,16 @@
-import { useState, useContext, ChangeEvent, FormEvent } from 'react'
+import { useContext, FormEvent } from 'react'
 import { CurrencyCodeContainer } from './styles'
 import { useTranslation } from 'react-i18next'
 import { CurrencyContext } from '../../contexts/CurrencyContext'
 
 function InputCurrencyCode() {
-
   const { t } = useTranslation()
 
   const { get30DaysExchangeRate, handleSetCurrencyCode, currencyCode } = useContext(CurrencyContext)
 
-  // const [currencyCode, setCurrencyCode] = useState('')
-
-  // const handleTypeCurrencyCode = (event: ChangeEvent<HTMLInputElement>) => {
-  //   setCurrencyCode(event.target.value)
-  // }
-
   const handleGet30DaysExchangeRate = async (e: FormEvent) => {
     e.preventDefault()    
-    const res = await get30DaysExchangeRate(currencyCode)   
+    await get30DaysExchangeRate(currencyCode)   
   }
 
   return (

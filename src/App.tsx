@@ -6,6 +6,7 @@ import LatestExchangeRates from './components/LatestExchangeRates'
 import InputCurrencyCode from './components/InputCurrencyCode'
 import './utils/i18n'
 import { useTranslation } from 'react-i18next'
+import Charts from './components/Charts/Charts'
 
 function App() {  
 
@@ -25,6 +26,8 @@ function App() {
         <ExchangeRateRow />
 
         <LatestExchangeRates />
+
+        <Charts />
 
       </main>
 
