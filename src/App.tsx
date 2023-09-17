@@ -1,12 +1,15 @@
-import { useState, ChangeEvent } from 'react'
 import Header from './components/Header'
 import { GlobalStyle } from './styles/global'
 import Footer from './components/Footer'
 import ExchangeRateRow from './components/ExchangeRateRow'
 import LatestExchangeRates from './components/LatestExchangeRates'
 import InputCurrencyCode from './components/InputCurrencyCode'
+import './utils/i18n'
+import { useTranslation } from 'react-i18next'
 
-function App() {
+function App() {  
+
+  const { t } = useTranslation()
 
   return (
     <>
@@ -15,7 +18,7 @@ function App() {
 
       <main style={{padding: '0 1rem'}}>
 
-        <h1 className='title'>BRL Exchange Rate</h1>
+        <h1 className='title'>{t('label-title')}</h1>
 
         <InputCurrencyCode />
 

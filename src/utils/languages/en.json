@@ -1,0 +1,16 @@
+{
+  "label-title": "BRL Exchange Rate",
+  "label-exchange-result": "Exchange Result",
+  "label-exchange-rate-now": "Exchange rate now",
+  "label-last-30-days": "Last 30 days",
+  "label-open": "Open",
+  "label-close": "Close",
+  "label-high": "High",
+  "label-low": "Low",
+  "label-close-diff": "Close diff",
+  "label-loading": "Loading",
+
+  "placeholder-currency-code": "Enter currency code",
+
+  "error-request": "something went wrong"
+}

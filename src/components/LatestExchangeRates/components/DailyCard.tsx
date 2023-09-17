@@ -1,26 +1,49 @@
+import { useTranslation } from 'react-i18next'
 import { Card } from './styles'
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md'
+import { IDailyExhangeRateList } from '../../../types/currency'
+import formatDate from '../../../utils/formatDate'
+import formatHour from '../../../utils/formatHour'
 
-function DailyCard() {
+interface IDailyCard {
+  data: IDailyExhangeRateList, 
+  diffPercent: string | null
+  closeDiffColor: string 
+  arrowIcon: boolean
+}
+
+function DailyCard({ data, diffPercent, closeDiffColor, arrowIcon }: IDailyCard) {
+  const { open, close, high, low, date } = data
+  const { t } = useTranslation()
+
+  const formattedDate = formatDate(date.toString())
+  const formattedHour = formatHour(date.toString()) 
+
   return (
     <Card>
 
-      <div className='date'><span>09/03/2022</span></div>
+      <div className='date'><span>{formattedDate} - {formattedHour}</span></div>
 
       <div className="comparativeWrapper">
         <div className="comparative">
-          <p>Open: <span>R$ 5.066</span></p>
-          <p>Close: <span>R$ 5.038</span></p>
+          <p>{t('label-open')}: <span>{open}</span></p>
+          <p>{t('label-close')}: <span>{close}</span></p>
         </div>
 
         <div className="comparative">
-          <p>Hight: <span>R$ 5.066</span></p>
-          <p>Low: <span>R$ 5.038</span></p>
+          <p>{t('label-high')}: <span>{high}</span></p>
+          <p>{t('label-low')}: <span>{low}</span></p>
         </div>
       </div>
 
       <div className="closeDiff">
-        <p>Close diff (%): <span>-1.15% <MdKeyboardArrowDown /></span>  </p>
+        <p>
+          {t('label-close-diff')}(%): 
+          <span style={{color: closeDiffColor}}> 
+            {diffPercent} 
+            {arrowIcon ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}          
+          </span>  
+        </p>
       </div>
 
     </Card>

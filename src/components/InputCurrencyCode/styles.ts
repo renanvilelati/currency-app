@@ -17,7 +17,7 @@ export const CurrencyCodeContainer = styled.div`
     }
   }
 
-  > button {
+  form > button {
     color: #FFF;
     background: var(--primary);
     border: 0;
